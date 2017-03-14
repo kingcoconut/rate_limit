@@ -12,7 +12,7 @@ class Throttle
 
       # adding path to key allows us to rate limit on a per path basis
       # XXX: should consult with api lead to determine if desired on not
-      key = "rate_limit:#{env["REMOTE_ADDR"]}:#{path}"
+      key = "rate_limit:#{env["action_dispatch.remote_ip"].to_s}:#{path}"
       if requests = redis.get(key)
         requests = requests.to_i + 1
 
