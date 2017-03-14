@@ -58,3 +58,14 @@ There are three main drawbacks to this implementation, each of which need to be 
 ## Tests
 
 Located in **spec/middleware/throttle_spec.rb**
+
+## Where is the work?
+* app/middleware/throttle.rb
+* app/config/redis.yml
+* app/config/initializers/redis.rb
+* app/config/initializers/throttle.rb
+* spec/middleware/throttle_spec.rb
+* config/routes.rb
+* app/controllers/home_controller.rb
+
+Check commit history for other minor file edits
